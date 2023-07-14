@@ -2,7 +2,9 @@ package minwook.core.discount;
 
 import minwook.core.member.Grade;
 import minwook.core.member.Member;
+import org.springframework.stereotype.Component;
 
+@Component
 public class RateDiscountPolicy implements DiscountPolicy {
 
     private int discountPercent = 10;

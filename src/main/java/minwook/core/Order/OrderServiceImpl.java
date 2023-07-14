@@ -7,13 +7,16 @@ import minwook.core.member.Member;
 import minwook.core.member.MemberRepository;
 import minwook.core.member.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService {
 
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy; // final - 생성자 필수
     // final로 선언함으로 다른 구현체로 변경 불가 (의도한 동작 유지, 안정성 및 오류 방지)
 
+    @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
