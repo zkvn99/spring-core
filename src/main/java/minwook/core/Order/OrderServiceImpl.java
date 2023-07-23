@@ -15,7 +15,11 @@ public class OrderServiceImpl implements OrderService {
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy; // final - 생성자 필수
     // final로 선언함으로 다른 구현체로 변경 불가 (의도한 동작 유지, 안정성 및 오류 방지)
+    // final 없이 생성자 누락 시 테스트 에러
 
+    // 생성자 주입 (불변, 누락, final 키워드 사용 가능)
+    // 수정자 주입 및 나머지 주입은 모두 생성자 이후에 호출 (final 키워드 사용 불가)
+    // 기본으로 생성자 주입, 필수 값이 아닌 경우에 수정자 주입
     @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
