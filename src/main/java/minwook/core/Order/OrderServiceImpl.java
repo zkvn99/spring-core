@@ -1,5 +1,6 @@
 package minwook.core.Order;
 
+import lombok.RequiredArgsConstructor;
 import minwook.core.discount.DiscountPolicy;
 import minwook.core.discount.FixDiscountPolicy;
 import minwook.core.discount.RateDiscountPolicy;
@@ -20,11 +21,11 @@ public class OrderServiceImpl implements OrderService {
     // 생성자 주입 (불변, 누락, final 키워드 사용 가능)
     // 수정자 주입 및 나머지 주입은 모두 생성자 이후에 호출 (final 키워드 사용 불가)
     // 기본으로 생성자 주입, 필수 값이 아닌 경우에 수정자 주입
-    @Autowired
+
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
-    }
+    } // @RequiredArgsConstructor 사용 시 final이 붙은 필드를 모아서 생성자 자동 생성
 
     // private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
     // 역할과 구현을 분리해도 클라이언트인 OrderServiceImpl 코드 수정이 필요
