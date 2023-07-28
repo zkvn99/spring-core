@@ -8,6 +8,7 @@ import minwook.core.member.Member;
 import minwook.core.member.MemberRepository;
 import minwook.core.member.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -22,7 +23,8 @@ public class OrderServiceImpl implements OrderService {
     // 수정자 주입 및 나머지 주입은 모두 생성자 이후에 호출 (final 키워드 사용 불가)
     // 기본으로 생성자 주입, 필수 값이 아닌 경우에 수정자 주입
 
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+    @Autowired
+    public OrderServiceImpl(MemberRepository memberRepository, @Qualifier("mainDiscountPolicy") DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     } // @RequiredArgsConstructor 사용 시 final이 붙은 필드를 모아서 생성자 자동 생성
