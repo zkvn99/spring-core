@@ -1,5 +1,8 @@
 package minwook.core.lifecycle;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class NetworkClient {
 
     private String url;
@@ -28,6 +31,7 @@ public class NetworkClient {
         System.out.println("close: " + url);
     }
 
+    @PostConstruct
     public void init() throws Exception {
         System.out.println("NetworkClient.afterPropertiesSet");
         connect();
@@ -35,6 +39,7 @@ public class NetworkClient {
     }
     // 의존관계 주입이 끝나면 설정
 
+    @PreDestroy
     public void close() throws Exception {
         System.out.println("NetworkClient.destroy");
         disconnect();
