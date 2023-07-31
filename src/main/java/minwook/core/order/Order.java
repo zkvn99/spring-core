@@ -1,4 +1,4 @@
-package minwook.core.Order;
+package minwook.core.order;
 
 public class Order {
 

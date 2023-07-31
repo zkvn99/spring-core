@@ -1,10 +1,9 @@
-package minwook.core.Order;
+package minwook.core.order;
 
 import minwook.core.AppConfig;
 import minwook.core.member.Grade;
 import minwook.core.member.Member;
 import minwook.core.member.MemberService;
-import minwook.core.member.MemberServiceImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

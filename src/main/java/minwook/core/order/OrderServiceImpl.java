@@ -1,15 +1,10 @@
-package minwook.core.Order;
+package minwook.core.order;
 
-import lombok.RequiredArgsConstructor;
 import minwook.core.annotation.MainDiscountPolicy;
 import minwook.core.discount.DiscountPolicy;
-import minwook.core.discount.FixDiscountPolicy;
-import minwook.core.discount.RateDiscountPolicy;
 import minwook.core.member.Member;
 import minwook.core.member.MemberRepository;
-import minwook.core.member.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component

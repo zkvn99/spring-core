@@ -1,12 +1,8 @@
 package minwook.core.order;
 
-import minwook.core.Order.Order;
-import minwook.core.Order.OrderServiceImpl;
-import minwook.core.discount.DiscountPolicy;
 import minwook.core.discount.FixDiscountPolicy;
 import minwook.core.member.Grade;
 import minwook.core.member.Member;
-import minwook.core.member.MemberRepository;
 import minwook.core.member.MemoryMemberRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;

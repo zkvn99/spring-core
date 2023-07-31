@@ -9,7 +9,7 @@
 
     <bean id="memberRepository" class="minwook.core.member.MemoryMemberRepository"/>
 
-    <bean id="orderService" class="minwook.core.Order.OrderServiceImpl">
+    <bean id="orderService" class="minwook.core.order.OrderServiceImpl">
         <constructor-arg name="memberRepository" ref="memberRepository" />
         <constructor-arg name="discountPolicy" ref="discountPolicy" />
     </bean>

@@ -1,13 +1,11 @@
 package minwook.core.singleton;
 
 import minwook.core.AppConfig;
-import minwook.core.Order.OrderServiceImpl;
+import minwook.core.order.OrderServiceImpl;
 import minwook.core.member.MemberRepository;
-import minwook.core.member.MemberService;
 import minwook.core.member.MemberServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.mockito.internal.matchers.Or;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

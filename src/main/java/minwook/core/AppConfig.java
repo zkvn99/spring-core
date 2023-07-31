@@ -1,10 +1,8 @@
 package minwook.core;
 
-import minwook.core.Order.Order;
-import minwook.core.Order.OrderService;
-import minwook.core.Order.OrderServiceImpl;
+import minwook.core.order.OrderService;
+import minwook.core.order.OrderServiceImpl;
 import minwook.core.discount.DiscountPolicy;
-import minwook.core.discount.FixDiscountPolicy;
 import minwook.core.discount.RateDiscountPolicy;
 import minwook.core.member.MemberRepository;
 import minwook.core.member.MemberService;

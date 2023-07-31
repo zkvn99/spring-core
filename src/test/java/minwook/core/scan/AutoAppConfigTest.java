@@ -1,10 +1,9 @@
 package minwook.core.scan;
 
 import minwook.core.AutoAppConfig;
-import minwook.core.Order.OrderServiceImpl;
+import minwook.core.order.OrderServiceImpl;
 import minwook.core.member.MemberRepository;
 import minwook.core.member.MemberService;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
